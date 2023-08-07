@@ -14,17 +14,46 @@ html {
     margin-bottom: 200px;
 }
 
+.intro h2 {
+    font-weight: bolder;
+    font-size: 50px;
+}
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 400px;
+    background-image: url("../images/bitcoin.png");
+    border: 3px solid white;
+}
+
+.container:hover {
+    background-image: url('../images/cardano.jpg');
+    transition: 2s;
 }
 
 #cryptoName {
     height: auto;
-    width: 350px;
-    border: 10px solid white;
+    width: 400px;
+    height: 47px;
+    border: 3px solid black;
     border-radius: 8px;
+    font-size: 20px;
+    
+}
+
+
+#getTrend {
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: white;
+    width: 125px;
+    height: 50px;
+}
+
+#getTrend:hover{
+    background-color: black;
+    color: white;
 }

@@ -29,7 +29,8 @@ function App() {
 
 
         <div class="container">
-          <input type='text' name='crypto name' id="cryptoName" placeholder="Enter a crypto name..." />
+          <input type='text' name='crypto name' id="cryptoName" placeholder="Enter a crypto name..." /> <br />
+          <input type='submit' name='submit' value="Get Trend!" id='getTrend'/>
         </div>
       </body>
 
