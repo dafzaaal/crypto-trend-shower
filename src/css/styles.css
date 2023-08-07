@@ -1,0 +1,30 @@
+html {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+
+.intro {
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cryptoName {
+    height: auto;
+    width: 350px;
+    border: 10px solid white;
+    border-radius: 8px;
+}
