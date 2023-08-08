@@ -8,8 +8,8 @@ function Home() {
 
     let config = {
         headers : {
-            'X-RapidAPI-Key': '078e000b8fmshfadd6cd9a80da9ep1784c1jsne3532782c4c5',
-            'X-RapidAPI-Host': 'coingecko.p.rapidapi.com',
+            'X-RapidAPI-Key': '<INSERT RAPID API TOKEN>',
+            'X-RapidAPI-Host': '<HOST NAME>',
         }
     }
 
