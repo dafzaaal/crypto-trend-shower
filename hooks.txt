@@ -1,0 +1,108 @@
+1. useState() allows us to retain and update data based on a trigger
+2. has two parameters
+
+    i. a state variable used to retain the data between renders
+    ii. a state setter function to update the variable and trigger react to update the componenet
+        where a react component is a chunk of the UI
+
+3. have to import { useState } from react
+
+4. Example:
+
+    suppose we have a program which when is an article, it has a button called "next" at the bottom of the page
+    when clicked it should go to the next page where each page has an integer id
+
+    to navigate, we have in index counter, and when next is clicked, we call a function to update the counter +1
+
+    however, this does not work as react does not render the component until refreshed after the initial render and will only render
+    when a state change has been made, by triggering a state change in the index variable, we can get react to render the component again
+
+    which is where the useState() hook comes into play
+
+    by changing the line of index = 0
+    
+    to...
+
+    const [index, setIndex] = useState(0);
+
+    we have an index value which is the current state of the index, and a setIndex value which will be used to update the
+    state of index value when the "next" button is clicked (the "next" button is our trigger, so that we know when to update
+    indexs' state), where useState(0) refers to the initial value you are setting index to, in this case we want it starting at zero
+
+    so in the example, we have a button named "next", when clicked, it should update the index by 1, using the const we just made
+    w/ useState(), we can update the code as follows...
+
+
+    function handleClick(){
+        setIndex(index + 1);
+    }
+
+    as you can see, we update the current state on index by using the setIndex() element, we updated the current state of the index element
+
+    useState() is an example of a react "hook", any function with the keyword "use" in react is referred to as a hook function
+
+    "Hooks" in react are special function which only work when react is rendering 
+
+    Hooks CANNOT be called within loops such as for and while loops but only at the top level of your component
+
+5. states are local to your componenet, you cannot access state variables from other components inside another component, they are
+component-exclusive
+
+
+
+What is rendering?
+
+1. before an component is showed on screen, it has to be rendered by react, there are two scenarios in which a component will render
+
+    i. the initial render, this occurs when you run the app, in the index.js file, you can see the creation of the root in the ReactDOM
+    and then we have the root being rendered (root.render)
+
+    ii. the second way in which a components state has been changed
+
+2. the process of "rendering" refers to react calling your components, on the initial render, react will call the root component, whereas
+with subsequent renders, react will call the components whose states have been changed 
+
+3. this process is recursive, imagine you have a component whose state has been changed, react will render this component, lets say this component
+returns another componenet, then react will have to re-render the returned component and so on and so forth
+
+4. What is a ReactDOM and how does React work with it??
+
+    A. 
+
+        when in the initial render, react will create a virtual DOM which is a copy of the actual DOM, react will then use the
+        appendChild() method provided by the DOM API to add all the nodes from the virtual DOM to the screen, this process effectively
+        populates the page with the UI elements defined by your components
+
+        as your application continues to run, there might be some state changes to some components in which case a re-rendering will occur,
+        react calculates the most minimal set of changes needed to be made between the virtual DOM and the real DOM when a rendering occurs and will
+        only update the DOM if there is a difference between the previous rendering and the current 
+
+
+
+5. What is a DOM?
+
+    DOM (Document Object Model) represents in a tree-like structure of a web-page 
+
+    and can be described as follows...
+
+        document ---> html ---> made of a head and body ---> ...
+
+        basically outlines the structure of a webpage in html
+
+6. Then what is a ReactDOM??
+
+    a ReactDOM is specific part of the react library which helps react work with the DOM, think of it as a bridge
+    between reacts virtual representation of the UI (called the virtual DOM) and the actual browser DOM, ReactDOM 
+    takes care of rendering the react components onto the webpage, updating them, etc.
+
+
+
+
+--- API Calls w/ Axios --- 
+
+
+- API (Application Programming Interface) - essentially dictates how two programs interact with eachother
+- npm install axios --save (to install axios in your react project)
+- import axios from 'axios'
+- 
+

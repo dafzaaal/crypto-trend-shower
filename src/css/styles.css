@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html {
     font-family: 'Noto Sans JP', sans-serif;
     background-color: black;
@@ -19,22 +24,39 @@ html {
     font-size: 50px;
 }
 
-.container {
+#container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 400px;
-    background-image: url("../images/bitcoin.png");
+    height: 300px;
     border: 3px solid white;
+
 }
 
-.container:hover {
-    background-image: url('../images/cardano.jpg');
-    transition: 2s;
+
+
+.getCryptoList {
+    align-self: center;
+    background-color: white;
+    color: black;
+    margin-left: 25px;
+    font-weight: bold;
+    width: 115px;
+    height: 40px;
 }
+
+.getCryptoList:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
 
 #cryptoName {
+    color: black;
     height: auto;
     width: 400px;
     height: 47px;
@@ -45,15 +67,3 @@ html {
 }
 
 
-#getTrend {
-    font-size: 20px;
-    border-radius: 15px;
-    background-color: white;
-    width: 125px;
-    height: 50px;
-}
-
-#getTrend:hover{
-    background-color: black;
-    color: white;
-}
